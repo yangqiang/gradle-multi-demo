@@ -1,0 +1,11 @@
+plugins {
+    id('demo.spring-boot-application')
+}
+
+group = "${group}.application.admin"
+
+dependencies {
+    implementation(libs.mybatis.plus)
+    implementation('com.h2database:h2')
+    implementation('demo.admin-feature:admin-app1')
+}

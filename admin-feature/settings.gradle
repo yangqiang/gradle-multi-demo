@@ -1,0 +1,23 @@
+// == Define locations for build logic ==
+pluginManagement {
+    includeBuild('../build-logic')
+}
+
+enableFeaturePreview('VERSION_CATALOGS')
+
+// == Define locations for components ==
+dependencyResolutionManagement {
+//    repositories {
+//        mavenCentral()
+//    }
+    versionCatalogs {
+        libs {
+            from(files("../gradle/libs.versions.toml"))
+        }
+    }
+}
+
+includeBuild('../domain-model')
+// == Define the inner structure of this component ==
+rootProject.name = 'admin-feature'
+include('admin-app1')

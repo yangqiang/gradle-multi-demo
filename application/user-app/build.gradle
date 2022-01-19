@@ -1,0 +1,19 @@
+plugins {
+    // 普通的Java库
+    id('demo.java-library')
+    id('application')
+}
+apply plugin :'java'
+
+group = "${group}.application.user"
+
+dependencies {
+    implementation('demo.user-feature:user-app1')
+}
+
+ext {
+    javaMainClass = "demo.app.user.UserAppMain"
+}
+application {
+    mainClassName = javaMainClass
+}

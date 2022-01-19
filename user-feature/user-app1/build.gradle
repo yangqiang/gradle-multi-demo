@@ -1,0 +1,11 @@
+plugins {
+    id('demo.java-library')
+    // 生成测试报告
+    id('demo.report-aggregation')
+}
+group = "${group}.user-feature"
+dependencies {
+    implementation('demo:common')
+    implementation('demo:domain-model')
+    implementation(libs.okhttp)
+}

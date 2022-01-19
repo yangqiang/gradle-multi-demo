@@ -1,0 +1,11 @@
+plugins {
+    id('demo.common')
+}
+
+dependencies {
+    // Spring Boot Configuration Processor
+    annotationProcessor(libs.springboot.config)
+    // Validation
+    implementation(libs.springboot.validation)
+    implementation(libs.springboot.web)
+}

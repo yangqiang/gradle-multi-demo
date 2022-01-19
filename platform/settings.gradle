@@ -1,0 +1,16 @@
+// 平台
+enableFeaturePreview('VERSION_CATALOGS')
+
+dependencyResolutionManagement {
+    versionCatalogs {
+        libs {
+            from(files("../gradle/libs.versions.toml"))
+        }
+    }
+}
+
+rootProject.name = 'platform'
+
+include('product-platform')
+include('test-platform')
+include('plugins-platform')

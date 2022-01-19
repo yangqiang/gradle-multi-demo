@@ -1,0 +1,55 @@
+plugins {
+    id('demo.spring-boot-library')
+    id('org.springframework.boot')
+}
+
+ext {
+    env = System.getenv()
+    imageNameAndTag = "${env.HARBOR_REPO}/${env.HARBOR_CITY_PROJECT}/${env.JOB_BASE_NAME}:${env.TAG_VALUE}"
+    if (imageNameAndTag.contains('null')) {
+        imageNameAndTag = "${project.name}:latest"
+    }
+}
+
+tasks.register('printEnv', {
+    setGroup 'docker'
+    doLast {
+        println 'env:'
+        env.each { k, v -> println "\t${k}:${v}" }
+        println 'imageName: ' + imageNameAndTag
+    }
+})
+
+tasks.register('unpack', {
+    dependsOn 'bootJar'
+    setGroup 'docker'
+    doLast {
+        copy {
+            from(zipTree(tasks.bootJar.outputs.files.singleFile))
+            into("build/dependency")
+        }
+    }
+})
+
+tasks.register('build-docker-image', {
+    dependsOn unpack, 'printEnv'
+    setGroup 'docker'
+    doLast {
+        exec {
+            executable 'docker'
+            // 注意：各打包项目需要复制此 Dockerfile
+            args 'build', '-t', imageNameAndTag, '-f', 'Dockerfile', '.'
+        }
+    }
+})
+
+tasks.register('push', {
+    dependsOn 'build-docker-image'
+    setGroup 'docker'
+    doLast {
+        exec {
+            executable 'docker'
+            args 'push', imageNameAndTag
+        }
+    }
+})

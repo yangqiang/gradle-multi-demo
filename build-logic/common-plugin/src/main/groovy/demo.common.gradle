@@ -1,0 +1,54 @@
+plugins {
+    id('java')
+//    id('checkstyle')
+    id('demo.jacoco')
+}
+
+// 根 group
+group = 'demo'
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+allprojects {
+    repositories {
+        maven {
+            allowInsecureProtocol = true
+            url 'https://maven.aliyun.com/repository/public'
+        }
+        mavenCentral()
+        flatDir { dirs 'libs' }
+    }
+}
+
+dependencies {
+    // Platform
+    implementation(platform('demo.platform:product-platform'))
+
+    // Lombok
+    compileOnly(libs.lombok)
+    annotationProcessor(libs.lombok)
+    testAnnotationProcessor(libs.lombok)
+
+    // Validation
+    implementation(libs.validation)
+
+    // Jackson
+    implementation(libs.jackson.annotations)
+    implementation(libs.jackson.databind)
+
+    // Logback
+    implementation(libs.logback.classic)
+
+    // Guava
+    implementation(libs.guava)
+
+    // Test platform
+    testImplementation(platform('demo.platform:test-platform'))
+}
+
+tasks.named("test") {
+    useJUnitPlatform()
+}

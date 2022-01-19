@@ -1,0 +1,7 @@
+plugins {
+    id('demo.spring-boot-library')
+}
+group = "${group}.admin-feature"
+dependencies {
+    implementation('demo:domain-model')
+}

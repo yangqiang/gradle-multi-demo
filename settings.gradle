@@ -1,0 +1,8 @@
+rootProject.name = 'gradle-multi-demo'
+includeBuild('platform')
+includeBuild('build-logic')
+includeBuild('common')
+includeBuild('domain-model')
+includeBuild('user-feature')
+includeBuild('admin-feature')
+includeBuild('application')

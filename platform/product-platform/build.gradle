@@ -1,0 +1,16 @@
+plugins {
+    id('java-platform')
+}
+
+group = 'demo.platform'
+
+// allow the definition of dependencies to other platforms like the Spring Boot BOM
+javaPlatform.allowDependencies()
+
+dependencies {
+    api(platform(libs.springboot.dependencies))
+    api(libs.springboot.core)
+    api(libs.springboot.autoconfigure)
+    api(libs.spring.web)
+    api(libs.spring.context)
+}

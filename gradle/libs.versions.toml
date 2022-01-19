@@ -1,0 +1,254 @@
+[versions]
+
+# Groovy: https://groovy-lang.org/
+# Latest stable version: 3.0.8
+groovy = "3.0.5"
+
+# Checkstyle: https://checkstyle.sourceforge.io/
+# Latest stable version: 8.44
+checkstyle = "8.37"
+
+# Spring: https://spring.io/projects/spring-framework
+# Latest stable version: 5.2.16.RELEASE
+spring-framework = "5.2.7.RELEASE"
+spring-kafka = "2.3.3.RELEASE"
+
+# Springboot: https://spring.io/projects/spring-boot
+# Latest stable version: 2.5.3
+spring-boot = "2.5.3"
+
+# Junit4: https://junit.org/junit4/
+# Latest stable version: 4.13.2
+junit4 = "4.13"
+
+# Junit5: https://junit.org/junit5/
+# Latest stable version: jupiter 5.7.2, platform 1.7.2
+junit-jupiter = "5.7.1"
+junit-platform = "1.7.1"
+
+# Jackson: https://github.com/FasterXML/jackson
+# Latest stable version: 2.12.4
+jackson = "2.11.3"
+
+# Javax Validation API: https://mvnrepository.com/artifact/javax.validation/validation-api
+# Latest stable version: 2.0.1.Final
+validation = "2.0.1.Final"
+
+# Apache Juneau: http://juneau.apache.org/#about.html
+# Maven: https://mvnrepository.com/artifact/org.apache.juneau
+# Latest stable version: 8.2.0
+juneau = "8.2.0"
+
+# Project Lombok: https://projectlombok.org/
+# Latest stable version: 1.18.20
+lombok = "1.18.10"
+
+# Slf4j: http://www.slf4j.org/download.html
+# Latest stable version: 1.7.32
+slf4j = "1.7.30"
+
+# Logback: http://logback.qos.ch/
+# Latest stable version: 1.2.4
+logback = "1.2.3"
+
+# Caffeine: https://mvnrepository.com/artifact/com.github.ben-manes.caffeine/caffeine
+# Latest stable version: 2.9.2
+caffeine = "2.8.8"
+
+# OKHttp: https://mvnrepository.com/artifact/com.squareup.okhttp3/okhttp
+# Latest stable version: 4.9.1
+okhttp = "4.9.0"
+
+# Guava: https://mvnrepository.com/artifact/com.google.guava/guava
+# Latest stable version: 30.1.1-jre
+guava = "29.0-jre"
+
+# MyBatis-Plus: https://baomidou.com/guide
+# Latest stable version: 3.4.3.1
+mybatis-plus = "3.4.3.1"
+dynamic-datasource = "3.2.0"
+
+# PostgreSQL: https://mvnrepository.com/artifact/org.postgresql/postgresql
+# Latest stable version: 42.2.23
+postgresql = "42.2.23"
+
+# JSON Web Token Support For The JVM: https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt
+# Latest stable version: 0.9.1
+jwt = "0.9.0"
+
+# Hutool 工具包：https://hutool.cn/
+# Latest stable version: 5.7.7
+hutool = "5.5.8"
+
+# Apache HttpComponents: https://mvnrepository.com/artifact/org.apache.httpcomponents
+# Latest stable version: 4.5.13
+httpcomponents = "4.5.12"
+
+# YAML 1.1 parser and emitter for Java: https://mvnrepository.com/artifact/org.yaml/snakeyaml
+# Latest stable version: 1.29
+snakeyaml = "1.26"
+
+# Apache Commons CSV: https://mvnrepository.com/artifact/org.apache.commons/commons-csv
+# Latest stable version: 1.9.0
+apache-commons-csv = "1.5"
+
+# Apache Kafka2: https://mvnrepository.com/artifact/org.apache.kafka/kafka_2.12
+# Latest stable version: 2.8.1
+# Version in Hikivision data sdk: 2.1.1
+apache-kafka2 = "2.8.1"
+
+# Apache ude
+apache-ude = "1.0.2"
+
+# Apache axis
+apache-axis = "1.4"
+
+# Alibaba 阿里巴巴
+
+# Fastjson: https://mvnrepository.com/artifact/com.alibaba/fastjson
+# Latest stable version: 1.2.76
+fastjson = "1.2.75"
+
+# easyexcel
+easyexcel = "2.2.10"
+
+# Druid
+druid = "1.1.10"
+
+# 日历工具类
+lunar-version = "1.2.3"
+
+# Minio Java SDK: https://mvnrepository.com/artifact/io.minio/minio
+# Latest stable version: 8.3.0
+minio = "3.0.10"
+
+# Json Path
+json-path = "2.4.0"
+
+# prometheus
+prometheus = "1.7.2"
+
+# Javax XML
+javax-xml = "1.1"
+
+# Commons IO
+commons-io = "2.2"
+
+# 中枢 SDK
+central-system-open-sdk = "5.0.4-SNAPSHOT"
+central-system-encryption = "1.0.0"
+
+# bcpkix
+bcpkix = "1.57"
+
+# 海康 SDK
+hikvision-data-sdk = "1.3.1"
+
+[libraries]
+
+# Groovy
+groovy-core = { module = "org.codehaus.groovy:groovy", version.ref = "groovy" }
+groovy-json = { module = "org.codehaus.groovy:groovy-json", version.ref = "groovy" }
+groovy-nio = { module = "org.codehaus.groovy:groovy-nio", version.ref = "groovy" }
+
+# Spring
+spring-aop = { module = "org.springframework:spring-aop", version.ref = "spring-framework" }
+spring-beans = { module = "org.springframework:spring-beans", version.ref = "spring-framework" }
+spring-context = { module = "org.springframework:spring-context", version.ref = "spring-framework" }
+spring-core = { module = "org.springframework:spring-core", version.ref = "spring-framework" }
+spring-expression = { module = "org.springframework:spring-expression", version.ref = "spring-framework" }
+spring-jcl = { module = "org.springframework:spring-jcl", version.ref = "spring-framework" }
+spring-jdbc = { module = "org.springframework:spring-jdbc", version.ref = "spring-framework" }
+spring-messaging = { module = "org.springframework:spring-messaging", version.ref = "spring-framework" }
+spring-test = { module = "org.springframework:spring-test", version.ref = "spring-framework" }
+spring-tx = { module = "org.springframework:spring-tx", version.ref = "spring-framework" }
+spring-web = { module = "org.springframework:spring-web", version.ref = "spring-framework" }
+spring-webmvc = { module = "org.springframework:spring-webmvc", version.ref = "spring-framework" }
+spring-websocket = { module = "org.springframework:spring-websocket", version.ref = "spring-framework" }
+spring-kafka = { module = "org.springframework.kafka:spring-kafka",version.ref = "spring-kafka" }
+
+# Spring Boot
+springboot-core = { module = "org.springframework.boot:spring-boot", version.ref = "spring-boot" }
+springboot-web = { module = "org.springframework.boot:spring-boot-starter-web", version.ref = "spring-boot" }
+springboot-aop = { module = "org.springframework.boot:spring-boot-starter-aop", version.ref = "spring-boot" }
+springboot-thymeleaf = { module = "org.springframework.boot:spring-boot-starter-thymeleaf", version.ref = "spring-boot" }
+springboot-gradle = { module = "org.springframework.boot:org.springframework.boot.gradle.plugin", version.ref = "spring-boot" }
+springboot-dependencies = { module = "org.springframework.boot:spring-boot-dependencies", version.ref = "spring-boot" }
+springboot-config = { module = "org.springframework.boot:spring-boot-configuration-processor", version.ref = "spring-boot" }
+springboot-autoconfigure = { module = "org.springframework.boot:spring-boot-autoconfigure", version.ref = "spring-boot" }
+springboot-test = { module = "org.springframework.boot:spring-boot-starter-test", version.ref = "spring-boot" }
+springboot-security = { module = "org.springframework.boot:spring-boot-starter-security", version.ref = "spring-boot" }
+springboot-websocket = { module = "org.springframework.boot:spring-boot-starter-websocket", version.ref = "spring-boot" }
+springboot-validation = { module = "org.springframework.boot:spring-boot-starter-validation", version.ref = "spring-boot" }
+springboot-actuator = { module = "org.springframework.boot:spring-boot-starter-actuator", version.ref = "spring-boot" }
+
+# Junit 4 & 5
+junit4 = { module = "junit:junit", version.ref = "junit4" }
+junit-bom = { module = "org.junit:junit-bom", version.ref = "junit-jupiter" }
+junit-jupiter-api = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "junit-jupiter" }
+junit-jupiter-engine = { module = "org.junit.jupiter:junit-jupiter-engine", version.ref = "junit-jupiter" }
+
+# Javax Validation API
+validation = { module = "javax.validation:validation-api", version.ref = "validation" }
+
+# Jackson
+jackson-annotations = { module = "com.fasterxml.jackson.core:jackson-annotations", version.ref = "jackson" }
+jackson-core = { module = "com.fasterxml.jackson.core:jackson-core", version.ref = "jackson" }
+jackson-databind = { module = "com.fasterxml.jackson.core:jackson-databind", version.ref = "jackson" }
+
+# Project Lombok
+lombok = { module = "org.projectlombok:lombok", version.ref = "lombok" }
+
+# Slf4j: http://www.slf4j.org/download.html
+slf4j-api = { module = "org.slf4j:slf4j-api", version.ref = "slf4j" }
+slf4j-jul = { module = "org.slf4j:jul-to-slf4j", version.ref = "slf4j" }
+
+# Logback
+logback-classic = { module = "ch.qos.logback:logback-classic", version.ref = "logback" }
+logback-core = { module = "ch.qos.logback:logback-core", version.ref = "logback" }
+
+# Caffeine
+caffeine = { module = "com.github.ben-manes.caffeine:caffeine", version.ref = "caffeine" }
+
+# jwt
+jwt = { module = "io.jsonwebtoken:jjwt", version.ref = "jwt" }
+
+# hutool
+hutool = { module = "cn.hutool:hutool-all", version.ref = "hutool" }
+
+# OKHttp
+okhttp = { module = "com.squareup.okhttp3:okhttp", version.ref = "okhttp" }
+
+# Guava
+guava = { module = "com.google.guava:guava", version.ref = "guava" }
+
+# MyBatis-Plus
+mybatis-plus = { module = "com.baomidou:mybatis-plus-boot-starter", version.ref = "mybatis-plus" }
+dynamic-datasource = { module = "com.baomidou:dynamic-datasource-spring-boot-starter", version.ref = "dynamic-datasource" }
+
+# PostgreSQL
+postgresql = { module = "org.postgresql:postgresql", version.ref = "postgresql" }
+
+# Apache Juneau
+juneau-marshall = { module = "org.apache.juneau:juneau-marshall", version.ref = "juneau" }
+
+# Apache commons
+commons-lang3 = { group = "org.apache.commons", name = "commons-lang3", version = { strictly = "[3.8, 4.0[", prefer = "3.9" } }
+
+# Apache Commons IO https://mvnrepository.com/artifact/commons-io/commons-io
+commons-io = { module = "commons-io:commons-io", version.ref = "commons-io" }
+
+# Apache Commons CSV
+apache-commons-csv = { module = "org.apache.commons:commons-csv", version.ref = "apache-commons-csv" }
+
+# Apache kafka2
+apache-kafka2 = { module = "org.apache.kafka:kafka_2.12", version.ref = "apache-kafka2" }
+
+# YAML 1.1 parser and emitter for Java
+snakeyaml = { module = "org.yaml:snakeyaml", version.ref = "snakeyaml" }
+
+# prometheus
+prometheus = { module = "io.micrometer:micrometer-registry-prometheus", version.ref = "prometheus" }
+
+[bundles]
+groovy = ["groovy-core", "groovy-json", "groovy-nio"]

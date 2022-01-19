@@ -1,0 +1,21 @@
+enableFeaturePreview('VERSION_CATALOGS')
+
+dependencyResolutionManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+    }
+    versionCatalogs {
+        libs {
+            from(files("../gradle/libs.versions.toml"))
+        }
+    }
+}
+
+includeBuild('../platform')
+
+rootProject.name = 'build-logic'
+include('common-plugin')
+include('java-library')
+include('spring-boot-application')
+include('report-aggregation')

@@ -1,0 +1,15 @@
+plugins {
+    id('java-platform')
+}
+
+group = 'demo.platform'
+
+// allow the definition of dependencies to other platforms like the JUnit 5 BOM
+javaPlatform.allowDependencies()
+
+dependencies {
+    api(platform(libs.junit.bom))
+    api(libs.springboot.test)
+//    api(libs.junit.jupiter.api)
+//    api(libs.junit.jupiter.engine)
+}

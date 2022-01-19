@@ -1,0 +1,11 @@
+plugins {
+    id('java-platform')
+}
+
+group = 'demo.platform'
+
+dependencies {
+    constraints {
+        api(libs.springboot.gradle)
+    }
+}
